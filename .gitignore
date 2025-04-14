@@ -1,0 +1,4 @@
+# Ignore virtual environments
+Foods/
+*.pyc
+__pycache__/

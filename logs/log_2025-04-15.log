@@ -1,0 +1,9 @@
+2025-04-15 15:28:24,341 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-04-15 15:28:24,343 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-04-15 15:28:24,343 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-04-15 15:28:28,297 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-04-15 15:28:28,299 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-04-15 15:28:28,458 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-04-15 15:28:28,458 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-04-15 15:28:28,778 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-04-15 15:28:28,778 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.

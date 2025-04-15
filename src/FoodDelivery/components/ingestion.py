@@ -2,7 +2,7 @@ import sys
 import os
 import pandas as pd
 from src.FoodDelivery.exceptions.exception import ExceptionsHandling
-from src.FoodDelivery.logger.logger import get_logger
+from src.FoodDelivery.loggers.logger import get_logger
 import kaggle
 from config.config import RAW_DIR, TRAIN_PATH, TEST_PATH
 

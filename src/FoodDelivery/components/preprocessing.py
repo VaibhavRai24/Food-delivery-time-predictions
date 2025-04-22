@@ -9,6 +9,7 @@ from src.FoodDelivery.exceptions.exception import ExceptionsHandling
 from config.config import *
 import sys
 import joblib
+from geopy.distance import geodesic
 from pandas import DataFrame
 from sklearn.impute import SimpleImputer
 
@@ -100,5 +101,51 @@ class DataPreprocessing:
             logger.error(f"Error in encoding data: {e}")
             raise ExceptionsHandling(e, sys) from e
         
-    
+    def feature_engineering(self, dataframe: DataFrame) -> DataFrame:
+        
+        try:
+            dataframe["day"] = dataframe["Order_date"].dt.day
+            dataframe["month"] = dataframe["Order_date"].dt.month
+            dataframe["year"] = dataframe["Order_date"].dt.year
+            dataframe["quarter"] = dataframe["Order_date"].dt.quarter
+            dataframe["day_of_week"] = dataframe["Order_date"].dt.dayofweek.astype("int")
+            dataframe["is_month_end"] = dataframe["Order_date"].dt.is_month_end.astype("int")
+            dataframe["is_month_start"] = dataframe["Order_date"].dt.is_month_start.astype("int")
+            dataframe["is_quarter_end"] = dataframe["Order_date"].dt.is_quarter_end.astype("int")
+            dataframe["is_quarter_start"] = dataframe["Order_date"].dt.is_quarter_start.astype("int")
+            dataframe["is_year_end"] = dataframe["Order_date"].dt.is_year_end.astype("int")
+            dataframe["is_year_start"] = dataframe["Order_date"].dt.is_year_start.astype("int")
+            dataframe["is_weekend"] = dataframe["day_of_week"].apply(lambda x: 1 if x >= 5 else 0)
+            dataframe["is_weekday"] = dataframe["day_of_week"].apply(lambda x: 1 if x < 5 else 0)
+            dataframe["is_holiday"] = dataframe["Festival"].apply(lambda x: 1 if x == "Yes" else 0)
+            dataframe["Time_Ordered"] = pd.to_timedelta(dataframe["Time_Ordered"].fillna("00:00:00"))
+            dataframe["Time_Order_picked"] = pd.to_timedelta(dataframe["Time_Order_picked"].fillna("00:00:00"))
+            dataframe["Time_Ordered_formattted"] = dataframe['Order_date'] + dataframe["Time_Ordered"]
+            dataframe["Time_Order_picked_base"] = dataframe['Order_date'] + dataframe["Time_Order_picked"]
+            mask = dataframe['Time_Order_picked'] < dataframe['Time_Orderd']
+            dataframe.loc[mask, 'Time_Order_picked'] = dataframe.loc[mask, 'Time_Order_picked'] + pd.Timedelta(days=1)
+            dataframe["Order_prepare_time"] = (dataframe["Time_Order_picked"] - dataframe["Time_Ordered_formattted"]).dt.total_seconds() / 60
+            dataframe["Order_prepare_time"] = dataframe["Order_preprare_time"].fillna(dataframe["Order_preprare_time"].median())
+            
+            dataframe.drop(["Time_Ordered", "Time_Order_picked", "Order_date", "Time_Ordered_formattted", "Time_Order_picked_base"], axis=1, inplace=True)
+            restraunt_coordinates = dataframe[["Delivery_location_latitude", "Delivery_location_longitude"]].to_numpy()
+            delivery_location_coordinates  = dataframe[["Delivery_location_latitude", "Delivery_location_longitude"]].to_numpy()
+            dataframe["distance"] = np.array([geodesic(restraunt, delivery).kilometers for restraunt, delivery in zip(restraunt_coordinates, delivery_location_coordinates)])
+            dataframe  =self.encode_data(dataframe)
+            dataframe['distance_traffic'] = dataframe['distance'] * dataframe['Road_traffic_density']
+            dataframe['distance_deliveries'] = dataframe['distance'] * dataframe['multiple_deliveries']
+            dataframe['prep_traffic'] = dataframe['Order_prepare_time'] * dataframe['Road_traffic_density']
+            dataframe['age_ratings'] = dataframe['Delivery_person_Age'] * dataframe['Delivery_person_Ratings']
+            dataframe['prep_distance'] = dataframe['Order_prepare_time'] * dataframe['distance']
+            
+            for col in ['distance', 'order_prepare_time', 'Delivery_person_Age', 'multiple_deliveries']:
+                upper_limit = dataframe[col].quantile(0.99)
+                dataframe[col] = np.where(dataframe[col] > upper_limit, upper_limit, dataframe[col])
+                
+            logger.info("Feature engineering completed successfully.")
+            return dataframe
+        
+        except Exception as e:
+            logger.error(f"Error in feature engineering: {e}")
+            raise ExceptionsHandling(e, sys) from e
         

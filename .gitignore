@@ -3,3 +3,4 @@ Foods/
 *.pyc
 __pycache__/
 kaggle.json
+artifacts/

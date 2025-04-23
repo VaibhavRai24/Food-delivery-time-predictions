@@ -1,4 +1,6 @@
 from src.FoodDelivery.components.ingestion import DataIngestion
+from src.FoodDelivery.components.preprocessing import DataPreprocessing
+from src.FoodDelivery.components.feature_store import RedisFeatureStore
 from config.config import RAW_DIR, TRAIN_PATH, TEST_PATH
 from src.FoodDelivery.loggers.logger import get_logger
 import os
@@ -26,6 +28,22 @@ class TrainingPipeline:
             raise e
     
     
+    def DataPreprocessingStep(self):
+        """
+        This function is the main entry point for the data preprocessing step.
+        It creates an instance of the DataPreprocessing class and calls the run method.
+        
+        """
+        try:
+            logger.info("Starting data preprocessing step.")
+            feature_store  = RedisFeatureStore()
+            data_preprocessing = DataPreprocessing(training_data=TRAIN_PATH, testing_data =TEST_PATH, feature_store= feature_store)
+            data_preprocessing.run()
+            
+        except Exception as e:
+            logger.error("Data preprocessing process failed.")
+            raise e
+    
     def run_pipeline(self):
         """
         This function runs the entire pipeline by calling the DataIngestionStep function.
@@ -33,9 +51,11 @@ class TrainingPipeline:
         """
         try:
             self.DataIngestionStep()
-            
-        except Exception as e:
-            logger.error("Pipeline execution failed.")
+            self.DataPreprocessingStep()
+            logger.info("Pipeline executed successfully.")
+        except FileNotFoundError as e:
+            logger.error("File not found. Please check the file paths.")
             raise e
+        
     
     

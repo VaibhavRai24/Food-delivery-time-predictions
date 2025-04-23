@@ -1,0 +1,16 @@
+2025-04-23 10:46:33,772 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-04-23 10:46:33,774 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-04-23 10:46:33,775 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-04-23 10:46:38,843 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-04-23 10:46:38,843 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-04-23 10:46:38,980 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-04-23 10:46:38,981 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-04-23 10:46:39,283 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-04-23 10:46:39,284 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-04-23 10:46:39,286 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-04-23 10:46:39,287 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-04-23 10:46:39,287 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-04-23 10:46:39,428 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-04-23 10:46:39,429 - src.FoodDelivery.components.preprocessing - INFO - Error in preprocessing data 'NoneType' object has no attribute 'rename'
+2025-04-23 10:46:39,429 - src.FoodDelivery.components.preprocessing - ERROR - Error in data preprocessing: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\preprocessing.py] at line number: [59] with error message: ['NoneType' object has no attribute 'rename']
+2025-04-23 10:46:39,429 - src.FoodDelivery.pipeline.training_pipeline - ERROR - Data preprocessing process failed.

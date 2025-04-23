@@ -22,6 +22,7 @@ class DataPreprocessing:
         self.feature_store = feature_store
         self.train_data = None
         self.test_data = None
+        self.data = None
         self.top_features = [
             'multiple_deliveries', 'Road_traffic_density', 'Vehicle_condition', 'Delivery_person_Ratings',
             'distance_deliveries', 'Weather_conditions', 'Festival', 'distance_traffic', 'distance',
@@ -149,3 +150,66 @@ class DataPreprocessing:
             logger.error(f"Error in feature engineering: {e}")
             raise ExceptionsHandling(e, sys) from e
         
+        
+    def split_data(self, dataframe:DataFrame):
+        try:
+            X = dataframe.drop(columns=['Time_taken(min)'])
+            y = dataframe['Time_taken(min)']
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            self.X_train = self.X_train[self.top_features]
+            self.X_test = self.X_test[self.top_features]
+            self.test_data = self.test_data[self.top_features]
+            
+            scaler = StandardScaler()
+            self.X_train = scaler.fit_transform(self.X_train)   
+            self.X_test = scaler.transform(self.X_test)
+            self.test_data = scaler.transform(self.test_data)
+            
+            joblib.dump(scaler, SCALER_PATH)
+            logger.info("Data split and scaling completed successfully.")
+            
+        except Exception as e:
+            logger.error(f"Error in splitting data: {e}")
+            raise ExceptionsHandling(e, sys) from e
+        
+    def store_features_in_redis(self):
+        try:
+            batch_data = {}
+            for idx, row in self.data.iterrows():
+                entity_id = f"train_{idx}"
+                features = {col: row[col] for col in self.top_features}
+                features['Time_taken(min)'] = row['Time_taken(min)']
+                batch_data[entity_id] = features
+            self.feature_store.store_batch_features(batch_data)
+            logger.info("Train data features stored in Redis")
+        except Exception as e:
+            logger.error(f"Error while storing features in Redis: {e}")
+            raise ExceptionsHandling(str(e), sys.exc_info())
+
+    def retrieve_features_from_redis(self, entity_id):
+        features = self.feature_store.get_features(entity_id)
+        if features:
+            return features
+        logger.warning(f"No features found for entity_id: {entity_id}")
+        return None
+    
+    
+    def run(self):
+        try:
+            logger.info("Starting data preprocessing...")
+            self.load_data()
+            self.data  = self.preprocessing_the_data(self.data)
+            self.data = self.feature_engineering(self.data)
+            self.data = self.encode_data(self.data)
+            self.split_data(self.data)
+            self.store_features_in_redis()
+            logger.info("Data preprocessing completed successfully.")
+        except Exception as e:
+            logger.error(f"Error in data preprocessing: {e}")
+            raise ExceptionsHandling(e, sys) from e
+        
+if __name__ == "__main__":
+    feature_store = RedisFeatureStore()
+    data_preprocessing = DataPreprocessing(training_data=None, testing_data=None, feature_store=feature_store)
+    data_preprocessing.run()
+    logger.info("Data preprocessing script executed successfully.")

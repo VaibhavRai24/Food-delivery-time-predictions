@@ -1,0 +1,20 @@
+2025-04-24 12:43:53,980 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-04-24 12:43:53,981 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-04-24 12:43:53,981 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-04-24 12:43:58,886 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-04-24 12:43:58,887 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-04-24 12:43:59,033 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-04-24 12:43:59,033 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-04-24 12:43:59,378 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-04-24 12:43:59,378 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-04-24 12:43:59,381 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-04-24 12:43:59,381 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-04-24 12:43:59,381 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-04-24 12:43:59,525 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-04-24 12:43:59,858 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-04-24 12:44:02,728 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-24 12:44:02,735 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-04-24 12:44:02,735 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-24 12:44:02,760 - src.FoodDelivery.components.preprocessing - ERROR - Error in splitting data: "['distance_deliveries', 'Weather_conditions', 'distance_traffic', 'distance', 'prep_traffic'] not in index"
+2025-04-24 12:44:02,761 - src.FoodDelivery.components.preprocessing - ERROR - Error in data preprocessing: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\preprocessing.py] at line number: [162] with error message: ["['distance_deliveries', 'Weather_conditions', 'distance_traffic', 'distance', 'prep_traffic'] not in index"]
+2025-04-24 12:44:02,761 - src.FoodDelivery.pipeline.training_pipeline - ERROR - Data preprocessing process failed.

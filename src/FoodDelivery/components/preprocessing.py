@@ -61,20 +61,19 @@ class DataPreprocessing:
             if 'Time_taken(min)' in dataframe.columns:
                 dataframe['Time_taken(min)'] = dataframe['Time_taken(min)'].apply(lambda x:int(x.split(' ')[1].strip()))
             dataframe['Weather_conditions'] = dataframe['Weather_conditions'].apply(lambda x: x.split(' ')[1].strip() if pd.notnull(x) else x)
-            dataframe['City_code'] = dataframe['City_code'].str.split("RES", expand= True)[0]
-            dataframe.drop(['Deliver_person_ID', 'ID'], inplace= True, axis = 1)
+            dataframe['City_code'] = dataframe['Delivery_person_ID'].str.split("RES", expand= True)[0]
+            dataframe.drop(['Delivery_person_ID', 'ID'], inplace= True, axis = 1)
             dataframe['Delivery_person_Age'] = pd.to_numeric(dataframe['Delivery_person_Age'], errors='coerce').astype('float64')
-            dataframe['Delivery_person_rating'] = pd.to_numeric(dataframe['Delivery_person_rating'], errors= 'coerce').astype('float64')
+            dataframe['Delivery_person_Ratings'] = pd.to_numeric(dataframe['Delivery_person_Ratings'], errors= 'coerce').astype('float64')
             dataframe['multiple_deliveries'] = pd.to_numeric(dataframe['multiple_deliveries'], errors= 'coerce').astype('float64')
-            dataframe['Order_date'] = pd.to_datetime(dataframe['Order_date'], format= '%d-%m-%Y')
+            dataframe['Order_Date'] = pd.to_datetime(dataframe['Order_Date'], format= '%d-%m-%Y')
             dataframe['Weather_conditions'] = dataframe['Weather_conditions'].fillna(np.random.choice(dataframe['Weather_conditions'].dropna()))
             
-            simple_imputer  = SimpleImputer(strategy= 'mode')
-            dataframe['City'] = simple_imputer.fit_transform(dataframe[['City']])
+            dataframe['City'] = dataframe['City'].fillna(dataframe['City'].mode()[0])
             dataframe['Festival'] =  dataframe['Festival'].fillna(dataframe['Festival'].mode()[0])
             dataframe['multiple_deliveries'] = dataframe['multiple_deliveries'].fillna(dataframe['multiple_deliveries'].mode()[0])
             dataframe['Road_traffic_density'] = dataframe['Road_traffic_density'].fillna(dataframe['Road_traffic_density'].mode()[0])
-            dataframe['Delivery_person_rating'] = dataframe['Delivery_person_rating'].fillna(dataframe['Delivery_person_rating'].median())
+            dataframe['Delivery_person_Ratings'] = dataframe['Delivery_person_Ratings'].fillna(dataframe['Delivery_person_Ratings'].median())
             
             
             logger.info(" If u have founded the error here than have a look in the processing or all done successfully")
@@ -105,30 +104,32 @@ class DataPreprocessing:
     def feature_engineering(self, dataframe: DataFrame) -> DataFrame:
         
         try:
-            dataframe["day"] = dataframe["Order_date"].dt.day
-            dataframe["month"] = dataframe["Order_date"].dt.month
-            dataframe["year"] = dataframe["Order_date"].dt.year
-            dataframe["quarter"] = dataframe["Order_date"].dt.quarter
-            dataframe["day_of_week"] = dataframe["Order_date"].dt.dayofweek.astype("int")
-            dataframe["is_month_end"] = dataframe["Order_date"].dt.is_month_end.astype("int")
-            dataframe["is_month_start"] = dataframe["Order_date"].dt.is_month_start.astype("int")
-            dataframe["is_quarter_end"] = dataframe["Order_date"].dt.is_quarter_end.astype("int")
-            dataframe["is_quarter_start"] = dataframe["Order_date"].dt.is_quarter_start.astype("int")
-            dataframe["is_year_end"] = dataframe["Order_date"].dt.is_year_end.astype("int")
-            dataframe["is_year_start"] = dataframe["Order_date"].dt.is_year_start.astype("int")
+            dataframe["day"] = dataframe["Order_Date"].dt.day
+            dataframe["month"] = dataframe["Order_Date"].dt.month
+            dataframe["year"] = dataframe["Order_Date"].dt.year
+            dataframe["quarter"] = dataframe["Order_Date"].dt.quarter
+            dataframe["day_of_week"] = dataframe["Order_Date"].dt.dayofweek.astype("int")
+            dataframe["is_month_end"] = dataframe["Order_Date"].dt.is_month_end.astype("int")
+            dataframe["is_month_start"] = dataframe["Order_Date"].dt.is_month_start.astype("int")
+            dataframe["is_quarter_end"] = dataframe["Order_Date"].dt.is_quarter_end.astype("int")
+            dataframe["is_quarter_start"] = dataframe["Order_Date"].dt.is_quarter_start.astype("int")
+            dataframe["is_year_end"] = dataframe["Order_Date"].dt.is_year_end.astype("int")
+            dataframe["is_year_start"] = dataframe["Order_Date"].dt.is_year_start.astype("int")
             dataframe["is_weekend"] = dataframe["day_of_week"].apply(lambda x: 1 if x >= 5 else 0)
             dataframe["is_weekday"] = dataframe["day_of_week"].apply(lambda x: 1 if x < 5 else 0)
             dataframe["is_holiday"] = dataframe["Festival"].apply(lambda x: 1 if x == "Yes" else 0)
-            dataframe["Time_Ordered"] = pd.to_timedelta(dataframe["Time_Ordered"].fillna("00:00:00"))
-            dataframe["Time_Order_picked"] = pd.to_timedelta(dataframe["Time_Order_picked"].fillna("00:00:00"))
-            dataframe["Time_Ordered_formattted"] = dataframe['Order_date'] + dataframe["Time_Ordered"]
-            dataframe["Time_Order_picked_base"] = dataframe['Order_date'] + dataframe["Time_Order_picked"]
+            dataframe['Time_Orderd'] = dataframe['Time_Orderd'].str.strip()
+            dataframe["Time_Orderd"] = pd.to_timedelta(dataframe["Time_Orderd"].fillna("00:00:00"), errors='coerce')
+            dataframe['Time_Order_picked'] = dataframe['Time_Order_picked'].str.strip()
+            dataframe["Time_Order_picked"] = pd.to_timedelta(dataframe["Time_Order_picked"].fillna("00:00:00"), errors='coerce')
+            dataframe["Time_Ordered_formattted"] = dataframe['Order_Date'] + dataframe["Time_Orderd"]
+            dataframe["Time_Order_picked_base"] = dataframe['Order_Date'] + dataframe["Time_Order_picked"]
             mask = dataframe['Time_Order_picked'] < dataframe['Time_Orderd']
             dataframe.loc[mask, 'Time_Order_picked'] = dataframe.loc[mask, 'Time_Order_picked'] + pd.Timedelta(days=1)
-            dataframe["Order_prepare_time"] = (dataframe["Time_Order_picked"] - dataframe["Time_Ordered_formattted"]).dt.total_seconds() / 60
-            dataframe["Order_prepare_time"] = dataframe["Order_preprare_time"].fillna(dataframe["Order_preprare_time"].median())
+            dataframe["Order_prepare_time"] = (dataframe["Time_Ordered_formattted"] - dataframe["Time_Ordered_formattted"]).dt.total_seconds() / 60
+            dataframe["Order_prepare_time"] = dataframe["Order_prepare_time"].fillna(dataframe["Order_prepare_time"].median())
             
-            dataframe.drop(["Time_Ordered", "Time_Order_picked", "Order_date", "Time_Ordered_formattted", "Time_Order_picked_base"], axis=1, inplace=True)
+            dataframe.drop(["Time_Orderd", "Time_Order_picked", "Order_Date", "Time_Ordered_formattted", "Time_Order_picked_base"], axis=1, inplace=True)
             restraunt_coordinates = dataframe[["Delivery_location_latitude", "Delivery_location_longitude"]].to_numpy()
             delivery_location_coordinates  = dataframe[["Delivery_location_latitude", "Delivery_location_longitude"]].to_numpy()
             dataframe["distance"] = np.array([geodesic(restraunt, delivery).kilometers for restraunt, delivery in zip(restraunt_coordinates, delivery_location_coordinates)])
@@ -139,7 +140,7 @@ class DataPreprocessing:
             dataframe['age_ratings'] = dataframe['Delivery_person_Age'] * dataframe['Delivery_person_Ratings']
             dataframe['prep_distance'] = dataframe['Order_prepare_time'] * dataframe['distance']
             
-            for col in ['distance', 'order_prepare_time', 'Delivery_person_Age', 'multiple_deliveries']:
+            for col in ['distance', 'Order_prepare_time', 'Delivery_person_Age', 'multiple_deliveries']:
                 upper_limit = dataframe[col].quantile(0.99)
                 dataframe[col] = np.where(dataframe[col] > upper_limit, upper_limit, dataframe[col])
                 
@@ -198,6 +199,7 @@ class DataPreprocessing:
         try:
             logger.info("Starting data preprocessing...")
             self.load_data()
+            self.data =  self.train_data.copy()
             self.data  = self.preprocessing_the_data(self.data)
             self.data = self.feature_engineering(self.data)
             self.data = self.encode_data(self.data)

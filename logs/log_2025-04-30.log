@@ -1,0 +1,79 @@
+2025-04-30 15:31:15,966 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-04-30 15:31:15,967 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-04-30 15:31:15,967 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-04-30 15:31:19,605 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-04-30 15:31:19,606 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-04-30 15:31:19,745 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-04-30 15:31:19,746 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-04-30 15:31:20,053 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-04-30 15:31:20,053 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-04-30 15:31:20,055 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-04-30 15:31:20,055 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-04-30 15:31:20,055 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-04-30 15:31:20,220 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-04-30 15:31:20,596 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-04-30 15:31:23,383 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:31:23,389 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-04-30 15:31:23,389 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:31:23,455 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-04-30 15:31:24,158 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:31:24,162 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-04-30 15:31:24,162 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:31:24,204 - src.FoodDelivery.components.preprocessing - INFO -  Some error has taken place while saving the file
+2025-04-30 15:31:24,204 - src.FoodDelivery.components.preprocessing - ERROR - Error in splitting data: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\preprocessing.py] at line number: [49] with error message: [Cannot save file into a non-existent directory: 'artifacts\processed']
+2025-04-30 15:31:24,204 - src.FoodDelivery.components.preprocessing - ERROR - Error in data preprocessing: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\preprocessing.py] at line number: [181] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\preprocessing.py] at line number: [49] with error message: [Cannot save file into a non-existent directory: 'artifacts\processed']]
+2025-04-30 15:31:24,205 - src.FoodDelivery.pipeline.training_pipeline - ERROR - Data preprocessing process failed.
+2025-04-30 15:33:21,474 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-04-30 15:33:21,475 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-04-30 15:33:21,476 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-04-30 15:33:25,064 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-04-30 15:33:25,065 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-04-30 15:33:25,210 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-04-30 15:33:25,211 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-04-30 15:33:25,514 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-04-30 15:33:25,514 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-04-30 15:33:25,517 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-04-30 15:33:25,517 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-04-30 15:33:25,517 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-04-30 15:33:25,660 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-04-30 15:33:26,002 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-04-30 15:33:28,763 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:33:28,769 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-04-30 15:33:28,770 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:33:28,835 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-04-30 15:33:29,529 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:33:29,533 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-04-30 15:33:29,534 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:33:29,879 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-04-30 15:33:29,957 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-04-30 15:33:30,062 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-04-30 15:33:30,062 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-04-30 15:33:30,063 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-04-30 15:33:30,066 - src.FoodDelivery.pipeline.training_pipeline - INFO - Pipeline executed successfully.
+2025-04-30 15:47:42,737 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-04-30 15:47:42,738 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-04-30 15:47:42,738 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-04-30 15:47:46,344 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-04-30 15:47:46,345 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-04-30 15:47:46,540 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-04-30 15:47:46,540 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-04-30 15:47:46,866 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-04-30 15:47:46,866 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-04-30 15:47:46,870 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-04-30 15:47:46,870 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-04-30 15:47:46,871 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-04-30 15:47:47,038 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-04-30 15:47:47,370 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-04-30 15:47:50,170 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:47:50,178 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-04-30 15:47:50,179 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:47:50,247 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-04-30 15:47:50,929 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:47:50,934 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-04-30 15:47:50,934 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-04-30 15:47:51,298 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-04-30 15:47:51,375 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-04-30 15:47:51,469 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-04-30 15:47:51,469 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-04-30 15:47:51,470 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-04-30 15:47:51,474 - src.FoodDelivery.pipeline.training_pipeline - INFO - Pipeline executed successfully.

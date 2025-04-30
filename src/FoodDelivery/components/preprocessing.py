@@ -3,7 +3,6 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
-from src.FoodDelivery.components.feature_store import RedisFeatureStore
 from src.FoodDelivery.loggers.logger import get_logger
 from src.FoodDelivery.exceptions.exception import ExceptionsHandling
 from config.config import *
@@ -16,7 +15,7 @@ from sklearn.impute import SimpleImputer
 logger = get_logger(__name__)
 
 class DataPreprocessing:
-    def __init__(self, training_data, testing_data, feature_store:RedisFeatureStore):
+    def __init__(self, training_data, testing_data, feature_store= None):
         self.training_data = training_data
         self.testing_data = testing_data
         self.feature_store = feature_store
@@ -41,7 +40,18 @@ class DataPreprocessing:
             logger.error(f"File not found: {e}")
             raise ExceptionsHandling(e, sys) from e
         
+    def save_data(self, df:pd.DataFrame, file_path:str) -> None:
+        """
+        We are making out this fun to save the data in the form of csv at the given file path
         
+        """
+        try:
+            df.to_csv(file_path, index= False)
+            logger.info(f" Saved the file at the given place successfully{file_path}")
+            
+        except Exception as e:
+            logger.info(" Some error has taken place while saving the file")
+            raise ExceptionsHandling(e, sys)   
         
     def  preprocessing_the_data(self, dataframe:DataFrame) ->DataFrame:
         """
@@ -162,56 +172,49 @@ class DataPreprocessing:
             self.test_data = self.test_data[self.top_features]
             
             scaler = StandardScaler()
-            self.X_train = scaler.fit_transform(self.X_train)   
-            self.X_test = scaler.transform(self.X_test)
-            self.test_data = scaler.transform(self.test_data)
+            self.X_train = pd.DataFrame(scaler.fit_transform(self.X_train), columns=self.top_features)
+            self.X_test = pd.DataFrame(scaler.transform(self.X_test), columns=self.top_features)
+            self.test_data = pd.DataFrame(scaler.transform(self.test_data), columns=self.top_features)
+
             
+            os.makedirs(os.path.dirname(SCALER_PATH), exist_ok=True)
             joblib.dump(scaler, SCALER_PATH)
+            os.makedirs(os.path.dirname(PROCESSED_TRAIN_DATA_PATH), exist_ok=True)
+            os.makedirs(os.path.dirname(PROCESSED_TEST_DATA_PATH), exist_ok=True)
+            
+            self.save_data(pd.DataFrame(self.X_train), PROCESSED_TRAIN_DATA_PATH)
+            self.save_data(pd.DataFrame(self.X_test), PROCESSED_TEST_DATA_PATH)
+            self.save_data(pd.DataFrame(self.test_data), PROCESSED_TESTING_DATA_PATH)
             logger.info("Data split and scaling completed successfully.")
             
         except Exception as e:
             logger.error(f"Error in splitting data: {e}")
             raise ExceptionsHandling(e, sys) from e
-        
-    def store_features_in_redis(self):
-        try:
-            batch_data = {}
-            for idx, row in self.data.iterrows():
-                entity_id = f"train_{idx}"
-                features = {col: row[col] for col in self.top_features}
-                features['Time_taken(min)'] = row['Time_taken(min)']
-                batch_data[entity_id] = features
-            self.feature_store.store_batch_features(batch_data)
-            logger.info("Train data features stored in Redis")
-        except Exception as e:
-            logger.error(f"Error while storing features in Redis: {e}")
-            raise ExceptionsHandling(str(e), sys.exc_info())
-
-    def retrieve_features_from_redis(self, entity_id):
-        features = self.feature_store.get_features(entity_id)
-        if features:
-            return features
-        logger.warning(f"No features found for entity_id: {entity_id}")
-        return None
     
     
     def run(self):
         try:
             logger.info("Starting data preprocessing...")
             self.load_data()
-            self.data =  self.train_data.copy()
-            self.data  = self.preprocessing_the_data(self.data)
-            self.data = self.feature_engineering(self.data)
-            self.data = self.encode_data(self.data)
-            self.split_data(self.data)
-            self.store_features_in_redis()
+            
+            self.training_data =  self.train_data.copy()
+            self.training_data  = self.preprocessing_the_data(self.training_data)
+            self.training_data = self.feature_engineering(self.training_data)
+            self.training_data = self.encode_data(self.training_data)
+            
+            self.test_data = self.test_data.copy()
+            self.test_data = self.preprocessing_the_data(self.test_data)
+            self.test_data = self.feature_engineering(self.test_data)
+            self.test_data = self.encode_data(self.test_data)
+            
+            self.split_data(self.training_data)
+            # self.store_features_in_redis()
             logger.info("Data preprocessing completed successfully.")
         except Exception as e:
             logger.error(f"Error in data preprocessing: {e}")
             raise ExceptionsHandling(e, sys) from e
         
 if __name__ == "__main__":
-    feature_store = RedisFeatureStore()
-    data_preprocessing = DataPreprocessing(training_data=None, testing_data=None, feature_store=feature_store)
+    data_preprocessing = DataPreprocessing(training_data=None, testing_data=None)
     data_preprocessing.run()
     logger.info("Data preprocessing script executed successfully.")

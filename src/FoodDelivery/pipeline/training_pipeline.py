@@ -1,6 +1,5 @@
 from src.FoodDelivery.components.ingestion import DataIngestion
 from src.FoodDelivery.components.preprocessing import DataPreprocessing
-from src.FoodDelivery.components.feature_store import RedisFeatureStore
 from config.config import RAW_DIR, TRAIN_PATH, TEST_PATH
 from src.FoodDelivery.loggers.logger import get_logger
 import os
@@ -36,8 +35,7 @@ class TrainingPipeline:
         """
         try:
             logger.info("Starting data preprocessing step.")
-            feature_store  = RedisFeatureStore()
-            data_preprocessing = DataPreprocessing(training_data=TRAIN_PATH, testing_data =TEST_PATH, feature_store= feature_store)
+            data_preprocessing = DataPreprocessing(training_data=TRAIN_PATH, testing_data =TEST_PATH)
             data_preprocessing.run()
             
         except Exception as e:

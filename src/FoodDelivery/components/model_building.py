@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split, RandomizedSearchCV
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, roc_auc_score
 import xgboost
 from sklearn.preprocessing import StandardScaler
-from src.FoodDelivery.loggers import logger
+from src.FoodDelivery.loggers.logger import get_logger
 from src.FoodDelivery.exceptions.exception import ExceptionsHandling
 from config.config import MODEL_DIR, SCALER_PATH, MODEL_PATH
 import os
@@ -13,9 +13,10 @@ import sys
 from pandas import DataFrame
 from config.config import *
 
+logger = get_logger(__name__)
 
 class ModelBuilding:
-    def __init__(self, train_path= TRAIN_PATH, test_path = TEST_PATH, model_saving_path=MODEL_DIR):
+    def __init__(self, train_path= TRAIN_PATH, test_path = TEST_PATH, model_saving_path=MODEL_PATH):
         self.train_path = train_path
         self.test_path = test_path
         self.model_saving_path = model_saving_path
@@ -32,7 +33,7 @@ class ModelBuilding:
         logger.info("ModelBuilding class initialized")
         
         
-    def load_data(file_path:str) ->DataFrame:
+    def load_data(self, file_path:str) ->DataFrame:
         try:
             if not os.path.exists(file_path):
                 logger.info(f"File path {file_path} does not exist or found")
@@ -57,8 +58,8 @@ class ModelBuilding:
             
             X_train = train_df[self.top_features]
             X_test = test_df[self.top_features]
-            y_train = train_df['time_taken']
-            y_test = test_df['time_taken']
+            y_train = train_df['Time_taken(min)']
+            y_test = test_df['Time_taken(min)']
             
             X_train_scaled = self.scaler.fit_transform(X_train)
             X_test_scaled = self.scaler.transform(X_test)

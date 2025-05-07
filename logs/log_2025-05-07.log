@@ -1,0 +1,143 @@
+2025-05-07 10:50:45,538 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-07 10:50:45,540 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-07 10:50:45,540 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-07 10:50:49,217 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-07 10:50:49,219 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-07 10:50:49,531 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-07 10:50:49,536 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-07 10:50:50,111 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-07 10:50:50,112 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-07 10:50:50,116 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-07 10:50:50,117 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-07 10:50:50,117 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-07 10:50:50,361 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-07 10:50:50,942 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-07 10:50:55,663 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:50:55,677 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-07 10:50:55,678 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:50:55,790 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-07 10:50:56,990 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:50:57,004 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-07 10:50:57,004 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:50:57,607 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-07 10:50:57,758 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-07 10:50:57,920 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-07 10:50:57,920 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-07 10:50:57,921 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-07 10:50:57,925 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-07 10:50:57,926 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-07 10:52:07,754 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-07 10:52:07,754 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-07 10:52:07,756 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-07 10:52:11,450 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-07 10:52:11,451 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-07 10:52:11,718 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-07 10:52:11,719 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-07 10:52:12,379 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-07 10:52:12,381 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-07 10:52:12,396 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-07 10:52:12,399 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-07 10:52:12,400 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-07 10:52:12,750 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-07 10:52:13,266 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-07 10:52:18,246 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:52:18,255 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-07 10:52:18,256 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:52:18,365 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-07 10:52:19,887 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:52:19,894 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-07 10:52:19,895 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:52:20,443 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-07 10:52:20,540 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-07 10:52:20,659 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-07 10:52:20,659 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-07 10:52:20,661 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-07 10:52:20,664 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-07 10:52:20,664 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-07 10:56:39,388 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-07 10:56:39,389 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-07 10:56:39,391 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-07 10:56:43,010 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-07 10:56:43,011 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-07 10:56:43,287 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-07 10:56:43,287 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-07 10:56:44,008 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-07 10:56:44,008 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-07 10:56:44,013 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-07 10:56:44,013 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-07 10:56:44,013 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-07 10:56:44,304 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-07 10:56:44,903 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-07 10:56:49,600 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:56:49,610 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-07 10:56:49,611 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:56:49,728 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-07 10:56:50,870 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:56:50,875 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-07 10:56:50,876 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:56:51,382 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-07 10:56:51,475 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-07 10:56:51,605 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-07 10:56:51,605 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-07 10:56:51,606 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-07 10:56:51,609 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-07 10:56:51,611 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-07 10:56:51,611 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-07 10:56:51,611 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-07 10:56:51,612 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-07 10:56:51,612 - src.FoodDelivery.components.model_building - ERROR - Error in data loading and splitting in model building part: ModelBuilding.load_data() takes 1 positional argument but 2 were given
+2025-05-07 10:56:51,612 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [51] with error message: [ModelBuilding.load_data() takes 1 positional argument but 2 were given]
+2025-05-07 10:56:51,612 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-07 10:59:26,375 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-07 10:59:26,377 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-07 10:59:26,377 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-07 10:59:30,007 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-07 10:59:30,008 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-07 10:59:30,278 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-07 10:59:30,279 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-07 10:59:30,823 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-07 10:59:30,823 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-07 10:59:30,828 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-07 10:59:30,828 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-07 10:59:30,828 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-07 10:59:31,115 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-07 10:59:31,663 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-07 10:59:36,609 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:59:36,623 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-07 10:59:36,624 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:59:36,807 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-07 10:59:38,100 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:59:38,107 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-07 10:59:38,107 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-07 10:59:38,625 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-07 10:59:38,731 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-07 10:59:38,860 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-07 10:59:38,861 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-07 10:59:38,862 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-07 10:59:38,866 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-07 10:59:38,868 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-07 10:59:38,868 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-07 10:59:38,868 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-07 10:59:38,868 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-07 10:59:38,949 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-07 10:59:38,979 - src.FoodDelivery.components.model_building - ERROR - Error in data loading and splitting in model building part: 'time_taken'
+2025-05-07 10:59:38,979 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [61] with error message: ['time_taken']
+2025-05-07 10:59:38,979 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-07 11:04:26,681 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-07 11:04:26,682 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-07 11:04:26,682 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-07 11:04:26,682 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-07 11:04:26,683 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-07 11:04:26,774 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-07 11:04:26,802 - src.FoodDelivery.components.model_building - ERROR - Error in data loading and splitting in model building part: 'Time_taken'
+2025-05-07 11:04:26,802 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [61] with error message: ['Time_taken']
+2025-05-07 11:04:26,803 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-07 11:07:56,331 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-07 11:07:56,332 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-07 11:07:56,332 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-07 11:07:56,332 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-07 11:07:56,332 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-07 11:07:56,427 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-07 11:07:56,453 - src.FoodDelivery.components.model_building - ERROR - Error in data loading and splitting in model building part: 'Time_taken(min)'
+2025-05-07 11:07:56,453 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [61] with error message: ['Time_taken(min)']
+2025-05-07 11:07:56,454 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......

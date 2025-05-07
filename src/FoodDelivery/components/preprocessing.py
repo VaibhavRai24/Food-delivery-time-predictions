@@ -208,7 +208,7 @@ class DataPreprocessing:
             self.test_data = self.encode_data(self.test_data)
             
             self.split_data(self.training_data)
-            # self.store_features_in_redis()
+            
             logger.info("Data preprocessing completed successfully.")
         except Exception as e:
             logger.error(f"Error in data preprocessing: {e}")

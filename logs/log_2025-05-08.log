@@ -1,0 +1,479 @@
+2025-05-08 10:51:40,678 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 10:51:40,679 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-08 10:51:40,679 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 10:51:40,679 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 10:51:40,679 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 10:51:40,752 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 10:51:40,787 - src.FoodDelivery.components.model_building - ERROR - Error in data loading and splitting in model building part: 'Time_taken(min)'
+2025-05-08 10:51:40,787 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [61] with error message: ['Time_taken(min)']
+2025-05-08 10:51:40,787 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 11:07:54,900 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 11:07:54,900 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-08 11:07:54,900 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 11:07:54,901 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 11:07:54,901 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: ModelBuilding.data_load_and_split() missing 1 required positional argument: 'file_path'
+2025-05-08 11:07:54,901 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 11:08:46,982 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-08 11:08:46,983 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-08 11:08:46,983 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-08 11:08:50,557 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-08 11:08:50,558 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-08 11:08:50,723 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-08 11:08:50,723 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-08 11:08:51,025 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-08 11:08:51,025 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-08 11:08:51,028 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-08 11:08:51,028 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-08 11:08:51,028 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-08 11:08:51,167 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-08 11:08:51,516 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:08:54,220 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:08:54,226 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:08:54,228 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:08:54,293 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:08:54,989 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:08:54,993 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:08:54,993 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:08:55,334 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-08 11:08:55,414 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-08 11:08:55,518 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-08 11:08:55,536 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train_target
+2025-05-08 11:08:55,543 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test_target
+2025-05-08 11:08:55,543 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-08 11:08:55,544 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-08 11:08:55,547 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 11:08:55,549 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-08 11:08:55,549 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 11:08:55,549 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 11:08:55,549 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: ModelBuilding.data_load_and_split() missing 1 required positional argument: 'file_path'
+2025-05-08 11:08:55,549 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 11:09:31,019 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-08 11:09:31,023 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-08 11:09:31,024 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-08 11:09:34,591 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-08 11:09:34,592 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-08 11:09:34,725 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-08 11:09:34,725 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-08 11:09:35,029 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-08 11:09:35,030 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-08 11:09:35,032 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-08 11:09:35,033 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-08 11:09:35,033 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-08 11:09:35,182 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-08 11:09:35,507 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:09:38,212 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:09:38,217 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:09:38,218 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:09:38,282 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:09:38,966 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:09:38,970 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:09:38,971 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:09:39,324 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-08 11:09:39,412 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-08 11:09:39,518 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-08 11:09:39,530 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train_target
+2025-05-08 11:09:39,534 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test_target
+2025-05-08 11:09:39,534 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-08 11:09:39,535 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-08 11:09:39,538 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 11:09:39,538 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-08 11:09:39,538 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 11:09:39,538 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 11:09:39,538 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 11:09:39,619 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 11:09:39,787 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 11:09:39,788 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 11:09:51,713 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 11:09:51,713 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 11:09:51,910 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: multi_class must be in ('ovo', 'ovr')
+2025-05-08 11:09:51,911 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [113] with error message: [multi_class must be in ('ovo', 'ovr')]
+2025-05-08 11:09:51,911 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 11:13:31,846 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 11:13:31,846 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-08 11:13:31,847 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 11:13:31,847 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 11:13:31,847 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 11:13:31,902 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 11:13:31,999 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 11:13:32,000 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 11:13:43,353 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 11:13:43,353 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 11:13:43,542 - src.FoodDelivery.components.model_building - INFO - Model Evaluation completed with RMSE: 4.966831820684181, MAE: 3.901468515396118, R2: 0.7186366319656372
+2025-05-08 11:13:43,542 - src.FoodDelivery.components.model_building - ERROR - Error in saving the model: [Errno 13] Permission denied: 'artifacts/models\\model.pkl'
+2025-05-08 11:13:43,543 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [126] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']
+2025-05-08 11:13:43,543 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [115] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [126] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']]
+2025-05-08 11:13:43,543 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 11:17:47,231 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 11:17:47,232 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-08 11:17:47,232 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 11:17:47,232 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 11:17:47,232 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 11:17:47,287 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 11:17:47,381 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 11:17:47,382 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 11:17:58,692 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 11:17:58,693 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 11:17:58,877 - src.FoodDelivery.components.model_building - INFO - Model Evaluation completed with RMSE: 4.966831820684181, MAE: 3.901468515396118, R2: 0.7186366319656372
+2025-05-08 11:17:58,878 - src.FoodDelivery.components.model_building - ERROR - Error in saving the model: [Errno 13] Permission denied: 'artifacts/models\\model.pkl'
+2025-05-08 11:17:58,878 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']
+2025-05-08 11:17:58,878 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [115] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']]
+2025-05-08 11:17:58,878 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 11:19:14,638 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 11:19:14,638 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-08 11:19:14,639 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 11:19:14,639 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 11:19:14,639 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 11:19:14,690 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 11:19:14,781 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 11:19:14,782 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 11:19:26,240 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 11:19:26,240 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 11:19:26,427 - src.FoodDelivery.components.model_building - INFO - Model Evaluation completed with RMSE: 4.966831820684181, MAE: 3.901468515396118, R2: 0.7186366319656372
+2025-05-08 11:19:26,428 - src.FoodDelivery.components.model_building - ERROR - Error in saving the model: [Errno 13] Permission denied: 'artifacts/models\\model.pkl'
+2025-05-08 11:19:26,428 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']
+2025-05-08 11:19:26,428 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [115] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']]
+2025-05-08 11:19:26,428 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 11:21:25,097 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-08 11:21:25,098 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-08 11:21:25,099 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-08 11:21:29,008 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-08 11:21:29,008 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-08 11:21:29,140 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-08 11:21:29,140 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-08 11:21:29,443 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-08 11:21:29,443 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-08 11:21:29,446 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-08 11:21:29,446 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-08 11:21:29,446 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-08 11:21:29,595 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-08 11:21:29,922 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:21:32,620 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:21:32,626 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:21:32,626 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:21:32,691 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:21:33,382 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:21:33,386 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:21:33,386 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:21:33,725 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-08 11:21:33,802 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-08 11:21:33,907 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-08 11:21:33,918 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train_target
+2025-05-08 11:21:33,922 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test_target
+2025-05-08 11:21:33,922 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-08 11:21:33,923 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-08 11:21:33,926 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 11:21:33,926 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-08 11:21:33,927 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 11:21:33,927 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 11:21:33,927 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 11:21:33,991 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 11:21:34,128 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 11:21:34,128 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 11:21:45,536 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 11:21:45,536 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 11:21:45,717 - src.FoodDelivery.components.model_building - INFO - Model Evaluation completed with RMSE: 4.966831820684181, MAE: 3.901468515396118, R2: 0.7186366319656372
+2025-05-08 11:21:45,718 - src.FoodDelivery.components.model_building - ERROR - Error in saving the model: [Errno 13] Permission denied: 'artifacts/models\\model.pkl'
+2025-05-08 11:21:45,718 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']
+2025-05-08 11:21:45,719 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [115] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']]
+2025-05-08 11:21:45,719 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 11:23:28,375 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-08 11:23:28,376 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-08 11:23:28,376 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-08 11:23:32,107 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-08 11:23:32,108 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-08 11:23:32,242 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-08 11:23:32,243 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-08 11:23:32,551 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-08 11:23:32,552 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-08 11:23:32,554 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-08 11:23:32,554 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-08 11:23:32,555 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-08 11:23:32,687 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-08 11:23:33,028 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:23:35,826 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:23:35,834 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:23:35,834 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:23:35,925 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:23:36,697 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:23:36,702 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:23:36,702 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:23:37,037 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-08 11:23:37,134 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-08 11:23:37,227 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-08 11:23:37,238 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train_target
+2025-05-08 11:23:37,244 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test_target
+2025-05-08 11:23:37,244 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-08 11:23:37,245 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-08 11:23:37,248 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 11:23:37,249 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-08 11:23:37,249 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 11:23:37,250 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 11:23:37,250 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 11:23:37,310 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 11:23:37,447 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 11:23:37,447 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 11:23:49,165 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 11:23:49,165 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 11:23:49,355 - src.FoodDelivery.components.model_building - INFO - Model Evaluation completed with RMSE: 4.966831820684181, MAE: 3.901468515396118, R2: 0.7186366319656372
+2025-05-08 11:23:49,356 - src.FoodDelivery.components.model_building - ERROR - Error in saving the model: [Errno 13] Permission denied: 'artifacts/models\\model.pkl'
+2025-05-08 11:23:49,356 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']
+2025-05-08 11:23:49,356 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [115] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']]
+2025-05-08 11:23:49,356 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 11:32:03,445 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-08 11:32:03,446 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-08 11:32:03,446 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-08 11:32:07,011 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-08 11:32:07,012 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-08 11:32:07,141 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-08 11:32:07,141 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-08 11:32:07,442 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-08 11:32:07,442 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-08 11:32:07,444 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-08 11:32:07,445 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-08 11:32:07,445 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-08 11:32:07,576 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-08 11:32:07,905 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:32:11,169 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:32:11,176 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:32:11,176 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:32:11,254 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:32:11,962 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:32:11,966 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:32:11,966 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:32:12,322 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-08 11:32:12,399 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-08 11:32:12,495 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-08 11:32:12,506 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train_target
+2025-05-08 11:32:12,511 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test_target
+2025-05-08 11:32:12,511 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-08 11:32:12,512 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-08 11:32:12,514 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 11:32:12,515 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-08 11:32:12,515 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 11:32:12,515 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 11:32:12,516 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 11:32:12,578 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 11:32:12,718 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 11:32:12,719 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 11:32:24,074 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 11:32:24,074 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 11:32:24,270 - src.FoodDelivery.components.model_building - INFO - Model Evaluation completed with RMSE: 4.966831820684181, MAE: 3.901468515396118, R2: 0.7186366319656372
+2025-05-08 11:32:24,271 - src.FoodDelivery.components.model_building - ERROR - Error in saving the model: [Errno 13] Permission denied: 'artifacts/models\\model.pkl'
+2025-05-08 11:32:24,272 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']
+2025-05-08 11:32:24,272 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [115] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models\\model.pkl']]
+2025-05-08 11:32:24,272 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 11:48:58,538 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-08 11:48:58,539 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-08 11:48:58,539 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-08 11:49:02,477 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-08 11:49:02,478 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-08 11:49:02,621 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-08 11:49:02,621 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-08 11:49:02,923 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-08 11:49:02,924 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-08 11:49:02,926 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-08 11:49:02,926 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-08 11:49:02,927 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-08 11:49:03,070 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-08 11:49:03,401 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:49:06,231 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:49:06,236 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:49:06,237 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:49:06,326 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:49:07,172 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:49:07,178 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:49:07,178 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:49:07,600 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-08 11:49:07,681 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-08 11:49:07,780 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-08 11:49:07,791 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train_target
+2025-05-08 11:49:07,796 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test_target
+2025-05-08 11:49:07,796 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-08 11:49:07,797 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-08 11:49:07,801 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 11:49:07,802 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models\model.pkl
+2025-05-08 11:49:07,802 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 11:49:07,802 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 11:49:07,802 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 11:49:07,893 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 11:49:08,023 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 11:49:08,023 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 11:49:20,211 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 11:49:20,211 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 11:49:20,408 - src.FoodDelivery.components.model_building - INFO - Model Evaluation completed with RMSE: 4.966831820684181, MAE: 3.901468515396118, R2: 0.7186366319656372
+2025-05-08 11:49:20,410 - src.FoodDelivery.components.model_building - ERROR - Error in saving the model: [Errno 13] Permission denied: 'artifacts/models'
+2025-05-08 11:49:20,410 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models']
+2025-05-08 11:49:20,410 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [115] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models']]
+2025-05-08 11:49:20,410 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 11:58:20,058 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-08 11:58:20,059 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-08 11:58:20,059 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-08 11:58:23,736 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-08 11:58:23,736 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-08 11:58:23,866 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-08 11:58:23,866 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-08 11:58:24,165 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-08 11:58:24,166 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-08 11:58:24,168 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-08 11:58:24,168 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-08 11:58:24,168 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-08 11:58:24,298 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-08 11:58:24,667 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:58:27,434 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:58:27,440 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:58:27,440 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:58:27,506 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 11:58:28,211 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:58:28,215 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 11:58:28,216 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 11:58:28,552 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-08 11:58:28,627 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-08 11:58:28,720 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-08 11:58:28,732 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train_target
+2025-05-08 11:58:28,736 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test_target
+2025-05-08 11:58:28,736 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-08 11:58:28,737 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-08 11:58:28,740 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 11:58:28,741 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models/model.pkl
+2025-05-08 11:58:28,741 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 11:58:28,741 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 11:58:28,741 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 11:58:28,803 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 11:58:28,952 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 11:58:28,953 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 11:58:40,476 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 11:58:40,476 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 11:58:40,665 - src.FoodDelivery.components.model_building - INFO - Model Evaluation completed with RMSE: 4.966831820684181, MAE: 3.901468515396118, R2: 0.7186366319656372
+2025-05-08 11:58:40,666 - src.FoodDelivery.components.model_building - ERROR - Error in saving the model: [Errno 13] Permission denied: 'artifacts/models/model.pkl'
+2025-05-08 11:58:40,666 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models/model.pkl']
+2025-05-08 11:58:40,667 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [115] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models/model.pkl']]
+2025-05-08 11:58:40,667 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 12:02:24,373 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-08 12:02:24,373 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-08 12:02:24,374 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-08 12:02:27,882 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-08 12:02:27,884 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-08 12:02:28,054 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-08 12:02:28,054 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-08 12:02:28,388 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-08 12:02:28,388 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-08 12:02:28,391 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-08 12:02:28,391 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-08 12:02:28,391 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-08 12:02:28,541 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-08 12:02:28,916 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 12:02:31,903 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:02:31,909 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 12:02:31,909 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:02:31,974 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 12:02:32,667 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:02:32,671 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 12:02:32,671 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:02:33,009 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-08 12:02:33,083 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-08 12:02:33,176 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-08 12:02:33,187 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train_target
+2025-05-08 12:02:33,191 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test_target
+2025-05-08 12:02:33,191 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-08 12:02:33,191 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-08 12:02:33,195 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 12:02:33,196 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models/modelsss.pkl
+2025-05-08 12:02:33,196 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 12:02:33,196 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 12:02:33,196 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 12:02:33,258 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 12:02:33,381 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 12:02:33,382 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 12:02:44,702 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 12:02:44,703 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 12:02:44,883 - src.FoodDelivery.components.model_building - INFO - Model Evaluation completed with RMSE: 4.966831820684181, MAE: 3.901468515396118, R2: 0.7186366319656372
+2025-05-08 12:02:44,884 - src.FoodDelivery.components.model_building - ERROR - Error in saving the model: [Errno 13] Permission denied: 'artifacts/models/modelsss.pkl'
+2025-05-08 12:02:44,884 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models/modelsss.pkl']
+2025-05-08 12:02:44,884 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [115] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models/modelsss.pkl']]
+2025-05-08 12:02:44,884 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 12:07:19,567 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-08 12:07:19,568 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-08 12:07:19,568 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-08 12:07:23,144 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-08 12:07:23,144 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-08 12:07:23,276 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-08 12:07:23,276 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-08 12:07:23,583 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-08 12:07:23,584 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-08 12:07:23,586 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-08 12:07:23,586 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-08 12:07:23,586 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-08 12:07:23,721 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-08 12:07:24,070 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 12:07:26,840 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:07:26,846 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 12:07:26,846 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:07:26,910 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 12:07:27,598 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:07:27,601 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 12:07:27,602 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:07:27,968 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-08 12:07:28,049 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-08 12:07:28,154 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-08 12:07:28,164 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train_target
+2025-05-08 12:07:28,170 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test_target
+2025-05-08 12:07:28,170 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-08 12:07:28,171 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-08 12:07:28,174 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 12:07:28,175 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models/models.pkl
+2025-05-08 12:07:28,175 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 12:07:28,175 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 12:07:28,176 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 12:07:28,241 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 12:07:28,372 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 12:07:28,373 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 12:07:39,926 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 12:07:39,927 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 12:07:40,112 - src.FoodDelivery.components.model_building - INFO - Model Evaluation completed with RMSE: 4.966831820684181, MAE: 3.901468515396118, R2: 0.7186366319656372
+2025-05-08 12:07:40,113 - src.FoodDelivery.components.model_building - ERROR - Error in saving the model: [Errno 13] Permission denied: 'artifacts/models/models.pkl'
+2025-05-08 12:07:40,113 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models/models.pkl']
+2025-05-08 12:07:40,113 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [115] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models/models.pkl']]
+2025-05-08 12:07:40,114 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......
+2025-05-08 12:09:42,104 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data ingestion step.
+2025-05-08 12:09:42,105 - src.FoodDelivery.components.ingestion - INFO - Kaggle api authentication successful.
+2025-05-08 12:09:42,105 - src.FoodDelivery.components.ingestion - INFO - Starting data ingestion process.
+2025-05-08 12:09:45,857 - src.FoodDelivery.components.ingestion - INFO - Dataset downloaded successfully.
+2025-05-08 12:09:45,858 - src.FoodDelivery.components.ingestion - INFO - Removed unwanted file: Sample_Submission.csv
+2025-05-08 12:09:45,983 - src.FoodDelivery.components.ingestion - INFO - Loaded the train file with 45593 and test file with 11399 records.
+2025-05-08 12:09:45,983 - src.FoodDelivery.components.ingestion - INFO - Saving train and test data to the specified directory.
+2025-05-08 12:09:46,278 - src.FoodDelivery.components.ingestion - INFO - Data saved successfully at the artifacts/raw\train.csv and artifacts/raw\test.csv.
+2025-05-08 12:09:46,279 - src.FoodDelivery.components.ingestion - INFO - Data ingestion process completed successfully.
+2025-05-08 12:09:46,281 - src.FoodDelivery.pipeline.training_pipeline - INFO - Starting data preprocessing step.
+2025-05-08 12:09:46,281 - src.FoodDelivery.components.preprocessing - INFO - DataPreprocessing class initialized.
+2025-05-08 12:09:46,281 - src.FoodDelivery.components.preprocessing - INFO - Starting data preprocessing...
+2025-05-08 12:09:46,410 - src.FoodDelivery.components.preprocessing - INFO - Data loaded successfully.
+2025-05-08 12:09:46,732 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 12:09:49,455 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:09:49,460 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 12:09:49,461 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:09:49,525 - src.FoodDelivery.components.preprocessing - INFO -  If u have founded the error here than have a look in the processing or all done successfully
+2025-05-08 12:09:50,217 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:09:50,220 - src.FoodDelivery.components.preprocessing - INFO - Feature engineering completed successfully.
+2025-05-08 12:09:50,221 - src.FoodDelivery.components.preprocessing - INFO - Data encoded successfully.
+2025-05-08 12:09:50,551 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train.csv
+2025-05-08 12:09:50,624 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test.csv
+2025-05-08 12:09:50,718 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_testing.csv
+2025-05-08 12:09:50,729 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_train_target
+2025-05-08 12:09:50,735 - src.FoodDelivery.components.preprocessing - INFO -  Saved the file at the given place successfullyartifacts/processed\processed_test_target
+2025-05-08 12:09:50,735 - src.FoodDelivery.components.preprocessing - INFO - Data split and scaling completed successfully.
+2025-05-08 12:09:50,736 - src.FoodDelivery.components.preprocessing - INFO - Data preprocessing completed successfully.
+2025-05-08 12:09:50,739 - src.FoodDelivery.pipeline.training_pipeline - INFO - Stating the model building part
+2025-05-08 12:09:50,740 - src.FoodDelivery.components.model_building - INFO - Model saving path created at artifacts/models/models.pkl
+2025-05-08 12:09:50,740 - src.FoodDelivery.components.model_building - INFO - ModelBuilding class initialized
+2025-05-08 12:09:50,740 - src.FoodDelivery.components.model_building - INFO - Model building process started
+2025-05-08 12:09:50,740 - src.FoodDelivery.components.model_building - INFO - Loadinfg the training data from the artifacts/processed\processed_train.csv
+2025-05-08 12:09:50,804 - src.FoodDelivery.components.model_building - INFO - Loading the testing data from the artifacts/processed\processed_test.csv
+2025-05-08 12:09:50,928 - src.FoodDelivery.components.model_building - INFO - Data loaded and split into training and testing data
+2025-05-08 12:09:50,929 - src.FoodDelivery.components.model_building - INFO - Model Evaluation has been started
+2025-05-08 12:10:02,366 - src.FoodDelivery.components.model_building - INFO - Model building and hyperparameter tuning completed
+2025-05-08 12:10:02,366 - src.FoodDelivery.components.model_building - INFO - Best parameters: {'subsample': 1.0, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.8}
+2025-05-08 12:10:02,581 - src.FoodDelivery.components.model_building - INFO - Model Evaluation completed with RMSE: 4.966831820684181, MAE: 3.901468515396118, R2: 0.7186366319656372
+2025-05-08 12:10:02,582 - src.FoodDelivery.components.model_building - ERROR - Error in saving the model: [Errno 13] Permission denied: 'artifacts/models/models.pkl'
+2025-05-08 12:10:02,582 - src.FoodDelivery.components.model_building - ERROR - Error during model evaluation: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models/models.pkl']
+2025-05-08 12:10:02,583 - src.FoodDelivery.components.model_building - ERROR - Error in running the model building process: Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [115] with error message: [Error occurred in script: [C:\Users\VAIBHAVRAI\OneDrive\Desktop\FoodDelivery\Food-delivery-time-predictions\src\FoodDelivery\components\model_building.py] at line number: [127] with error message: [[Errno 13] Permission denied: 'artifacts/models/models.pkl']]
+2025-05-08 12:10:02,583 - src.FoodDelivery.pipeline.training_pipeline - ERROR - File not found or error in the some of the function in the model building parrt.......

@@ -12,36 +12,36 @@ class TrainingPipeline:
     def __init__(self):
         pass
     
-    # def DataIngestionStep(self):
-    #     """
-    #     This function is the main entry point for the data ingestion step.
-    #     It creates an instance of the DataIngestion class and calls the run method.
+    def DataIngestionStep(self):
+        """
+        This function is the main entry point for the data ingestion step.
+        It creates an instance of the DataIngestion class and calls the run method.
         
-    #     """
-    #     try:
-    #         logger.info("Starting data ingestion step.")
-    #         data_ingestion = DataIngestion(output_dir= RAW_DIR)
-    #         data_ingestion.run()
+        """
+        try:
+            logger.info("Starting data ingestion step.")
+            data_ingestion = DataIngestion(output_dir= RAW_DIR)
+            data_ingestion.run()
             
-    #     except Exception as e:
-    #         logger.error("Data ingestion process failed.")
-    #         raise e
+        except Exception as e:
+            logger.error("Data ingestion process failed.")
+            raise e
     
     
-    # def DataPreprocessingStep(self):
-    #     """
-    #     This function is the main entry point for the data preprocessing step.
-    #     It creates an instance of the DataPreprocessing class and calls the run method.
+    def DataPreprocessingStep(self):
+        """
+        This function is the main entry point for the data preprocessing step.
+        It creates an instance of the DataPreprocessing class and calls the run method.
         
-    #     """
-    #     try:
-    #         logger.info("Starting data preprocessing step.")
-    #         data_preprocessing = DataPreprocessing(training_data=TRAIN_PATH, testing_data =TEST_PATH)
-    #         data_preprocessing.run()
+        """
+        try:
+            logger.info("Starting data preprocessing step.")
+            data_preprocessing = DataPreprocessing(training_data=TRAIN_PATH, testing_data =TEST_PATH)
+            data_preprocessing.run()
             
-    #     except Exception as e:
-    #         logger.error("Data preprocessing process failed.")
-    #         raise e
+        except Exception as e:
+            logger.error("Data preprocessing process failed.")
+            raise e
         
         
     def modelBuiding(self):
@@ -65,8 +65,8 @@ class TrainingPipeline:
         
         """
         try:
-            # self.DataIngestionStep()
-            # self.DataPreprocessingStep()
+            self.DataIngestionStep()
+            self.DataPreprocessingStep()
             self.modelBuiding()
             logger.info("Pipeline executed successfully.")
         except FileNotFoundError as e:

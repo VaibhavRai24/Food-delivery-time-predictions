@@ -56,10 +56,11 @@ class ModelBuilding:
             train_df = pd.DataFrame(train_df)
             test_df = pd.DataFrame(test_df)
             
-            X_train = train_df[self.top_features]
-            X_test = test_df[self.top_features]
-            y_train = train_df['Time_taken(min)']
-            y_test = test_df['Time_taken(min)']
+            X_train = self.load_data(PROCESSED_TRAIN_DATA_PATH)
+            X_test = self.load_data(PROCESSED_TEST_DATA_PATH)
+            y_train = self.load_data(PROCESSED_TRAIN_TARGET_PATH)['Time_taken(min)']
+            y_test = self.load_data(PROCESSED_TEST_TARGET_PATH)['Time_taken(min)']
+
             
             X_train_scaled = self.scaler.fit_transform(X_train)
             X_test_scaled = self.scaler.transform(X_test)
@@ -109,21 +110,21 @@ class ModelBuilding:
                 rmse = np.sqrt(mean_squared_error(y_test, y_pred_train))
                 mae = mean_absolute_error(y_test, y_pred_train)
                 r2 = r2_score(y_test, y_pred_train)
-                auc = roc_auc_score(y_test, y_pred_train)
                 
-                logger.info(f"Model Evaluation completed with RMSE: {rmse}, MAE: {mae}, R2: {r2}, AUC: {auc}")
+                logger.info(f"Model Evaluation completed with RMSE: {rmse}, MAE: {mae}, R2: {r2}")
                 self.save_model(best_model)
                 self.save_scaler(self.scaler)
-                return rmse, mae, r2, auc
+                return rmse, mae, r2
 
             except Exception as e:
                 logger.error(f"Error during model evaluation: {e}")
                 raise ExceptionsHandling(e, sys) from e
             
-    def save_model(self, model):
+    def save_model(self, best_model):
         try:
             model_path = MODEL_PATH
-            joblib.dump(model, model_path)
+            os.makedirs(os.path.dirname(model_path), exist_ok=True)
+            joblib.dump(best_model, model_path)
             logger.info(f"Model saved at {model_path}")
         except Exception as e:
             logger.error(f"Error in saving the model: {e}")
@@ -142,9 +143,9 @@ class ModelBuilding:
         try:
             logger.info("Model building process started")
             X_train, X_test, y_train, y_test = self.data_load_and_split()
-            best_model , rmse, mae, r2, auc = self.model_evaluation(X_train, y_train, X_test, y_test)
+            best_model , rmse, mae, r2 = self.model_evaluation(X_train, y_train, X_test, y_test)
             logger.info("Model building process completed")
-            return best_model, rmse, mae, r2, auc
+            return best_model, rmse, mae, r2
         except Exception as e:
             logger.error(f"Error in running the model building process: {e}")
             raise ExceptionsHandling(e, sys) from e

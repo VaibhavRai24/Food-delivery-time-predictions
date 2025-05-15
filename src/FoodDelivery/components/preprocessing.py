@@ -185,6 +185,13 @@ class DataPreprocessing:
             self.save_data(pd.DataFrame(self.X_train), PROCESSED_TRAIN_DATA_PATH)
             self.save_data(pd.DataFrame(self.X_test), PROCESSED_TEST_DATA_PATH)
             self.save_data(pd.DataFrame(self.test_data), PROCESSED_TESTING_DATA_PATH)
+    
+            os.makedirs(os.path.dirname(PROCESSED_TRAIN_TARGET_PATH), exist_ok=True)
+            os.makedirs(os.path.dirname(PROCESSED_TEST_TARGET_PATH), exist_ok=True)
+
+            self.save_data(pd.DataFrame(self.y_train, columns=['Time_taken(min)']), PROCESSED_TRAIN_TARGET_PATH)
+            self.save_data(pd.DataFrame(self.y_test, columns=['Time_taken(min)']), PROCESSED_TEST_TARGET_PATH)
+
             logger.info("Data split and scaling completed successfully.")
             
         except Exception as e:

@@ -8,9 +8,12 @@ PROCESSED_DIR = "artifacts/processed"
 PROCESSED_TRAIN_DATA_PATH = os.path.join(PROCESSED_DIR, "processed_train.csv")
 PROCESSED_TEST_DATA_PATH = os.path.join(PROCESSED_DIR, "processed_test.csv")
 PROCESSED_TESTING_DATA_PATH = os.path.join(PROCESSED_DIR, "processed_testing.csv")
+PROCESSED_TRAIN_TARGET_PATH = os.path.join(PROCESSED_DIR, "processed_train_target")
+PROCESSED_TEST_TARGET_PATH = os.path.join(PROCESSED_DIR, "processed_test_target")
+
 
 MODEL_DIR = "artifacts/models"
 
 SCALER_PATH = os.path.join(MODEL_DIR,'scaler.pkl')
 
-MODEL_PATH = os.path.join(MODEL_DIR,'model.pkl')
+MODEL_PATH =  'artifacts/models/models.pkl'
